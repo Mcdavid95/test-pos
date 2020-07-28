@@ -4,6 +4,7 @@ import Paper from "material-ui/Paper";
 import TextField from "material-ui/TextField";
 import { CircularProgress } from "material-ui/Progress";
 import Button from "material-ui/Button";
+import Avatar from "material-ui/Avatar";
 import { withRouter } from "react-router";
 import { connect } from "react-redux";
 import ErrorMessage from "../controls/messages/ErrorMessage";
@@ -83,10 +84,17 @@ class LoginPage extends Component {
     return (
       <div className={classes.root}>
         <div className={classes.loginContainer}>
+          <div className={classes.avatarContainer}>
+            <Avatar
+            alt="OyaSync Logo"
+            src="https://res.cloudinary.com/mc-cloud/image/upload/v1595931409/Oyasync_jz96yt.jpg"
+            className={classes.large}
+            />
+          </div>
           <Paper className={classes.paper}>
             <form onSubmit={this.onSubmit}>
               <div>
-                <span>Welcome to Easy POS</span>
+                <span><h3 style={{ margin: 0 }}>Welcome to OyaSync</h3></span>
               </div>
 
               <ErrorMessage
