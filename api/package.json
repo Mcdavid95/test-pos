@@ -2,7 +2,7 @@
   "devDependencies": {
     "@types/jsonwebtoken": "^7.2.7",
     "@types/node": "^8.0.29",
-    "axios": "^0.18.0",
+    "axios": "^0.18.1",
     "nodemon": "^1.17.5",
     "ts-node": "3.3.0",
     "typescript": "2.5.2"
