@@ -1,3 +1,5 @@
+import * as dotenv from 'dotenv';
+import { Claim } from './dtos/authTypes';
 import 'reflect-metadata';
 import { verify } from 'jsonwebtoken';
 import { openConnection } from './persistence';
@@ -6,7 +8,8 @@ import { Container } from 'typedi';
 import { Application } from 'express';
 import { config } from './config';
 import { Role } from './entity/User';
-import { Claim } from './dtos/authTypes';
+
+dotenv.config();
 
 async function authorizationChecker(
   action: Action,
