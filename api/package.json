@@ -32,6 +32,7 @@
     "dev:api": "nodemon",
     "build:api": "./node_modules/.bin/tsc",
     "prod:serve": "node build/index.js",
-    "start": "cross-env IS_PROD=true && yarn && yarn run build:api && yarn run prod:serve"
+    "postinstall": "yarn && yarn run build:api",
+    "start": "cross-env IS_PROD=true && yarn run prod:serve"
   }
 }
