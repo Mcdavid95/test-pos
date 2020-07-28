@@ -16,8 +16,7 @@ const styles = theme => ({
   },
   loginContainer: {
     display: "flex",
-    height: "calc(10vh)",
-    flexDirection: "column",
+    height: "calc(90vh)"
   },
   errorMessage: {
     width: "90%",
@@ -26,21 +25,6 @@ const styles = theme => ({
   wrapper: {
     marginTop: 20,
     position: "relative"
-  },
-  avatarContainer: {
-    minWidth: 300,
-    display: "grid",
-    flexDirection: "column",
-    width: "350px",
-    minHeight: "230px",
-    margin: "auto",
-    alignContent: "center",
-    justifyItems: "center",
-    padding: "20px 30px 30px 30px"
-  },
-  large: {
-    width: 150,
-    height: 150,
   },
   buttonProgress: {
     color: "black",

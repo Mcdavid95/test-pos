@@ -3,7 +3,7 @@ import { withRouter } from "react-router";
 import { withStyles } from "material-ui/styles";
 import Hidden from "material-ui/Hidden";
 import Drawer from "material-ui/Drawer";
-import Restaurant from "material-ui-icons/Restaurant";
+import ShoppingCart from "material-ui-icons/ShoppingCart";
 import Divider from "material-ui/Divider";
 import Menus from "./Menus";
 
@@ -47,8 +47,8 @@ class Sidebar extends Component {
       <div>
         <div className={classes.logo}>
           <div className={classes.logoContainer}>
-            <Restaurant />
-            <span>OyaSync</span>
+            <ShoppingCart />
+            <span>Point Of Sale</span>
           </div>
         </div>
         <Divider />
