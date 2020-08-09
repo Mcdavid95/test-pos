@@ -1,4 +1,4 @@
-import 'reflect-metadata';import { createConnection, Connection, ConnectionOptions } from 'typeorm';
+import 'reflect-metadata';
 import { verify } from 'jsonwebtoken';
 import { openConnection } from './persistence';
 import { createExpressServer, useContainer, Action } from 'routing-controllers';
@@ -7,6 +7,7 @@ import { Application } from 'express';
 import { config } from './config';
 import { Role } from './entity/User';
 import { Claim } from './dtos/authTypes';
+import { InitDB } from './persistence/index-pouch';
 
 async function authorizationChecker(
   action: Action,
@@ -45,6 +46,19 @@ async function authorizationChecker(
 async function createServer(): Promise<any> {
   try {
     await openConnection();
+    const db = new InitDB()
+    let info =  await db.baseDB.info()
+    console.log(info)
+    
+    const remote = 'http://admin:admin@localhost:5984/pos';
+
+    let options = {
+      live: true,
+      retry: true,
+      continuous: true
+    };
+
+    db.baseDB.sync(remote, options);
 
     // its important to set container before any operation you do with routing-controllers,
     // including importing controllers
@@ -62,8 +76,6 @@ async function createServer(): Promise<any> {
     });
 
     const port = process.env.PORT || 3500;
-    // const conn = await createTypeORMConn();
-    // await conn.runMigrations();
 
     app.listen(port, () => {
       console.log(`server started at ${port}`);

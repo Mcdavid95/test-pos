@@ -7,9 +7,20 @@
     "target": "es5",
     "module": "commonjs",
     "moduleResolution": "node",
+    "skipLibCheck": true,
     "outDir": "./build",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "sourceMap": true
-  }
+    "allowSyntheticDefaultImports": true,
+    "sourceMap": true,
+    "types": []
+  },
+
+  "exclude": [
+    "node_modules",
+    "./node_modules",
+    "../node_modules",
+    "./node_modules/*",
+    "./node_modules/@types/node/index.d.ts"
+  ]
 }

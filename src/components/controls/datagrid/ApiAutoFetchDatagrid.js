@@ -88,7 +88,7 @@ class ApiAutoFetchDatagrid extends Component {
       const res = await props.datasourcePromise();
 
       const paginationInfo = getPaginationInfo(res.headers.link);
-      const list = res.data;
+      const list = res.data.customers ? res.data.customers : res.data;
       const data = {
         list,
         paginationInfo
