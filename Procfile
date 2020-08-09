@@ -1,2 +1,3 @@
-web: yarn run start:web
-worker: yarn run start:api
+api: cd api && yarn dev:api
+web: yarn && yarn start:web
+electron: node electron-wait-react
