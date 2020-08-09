@@ -32,7 +32,7 @@ const expense = apiBuilder("expenses");
 
 const product = apiBuilder("products");
 
-const customer = apiBuilder("customers");
+const customer = apiBuilder("pouch-customers");
 
 const vendor = apiBuilder("vendors");
 
