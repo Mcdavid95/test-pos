@@ -1,3 +1,2 @@
-api: cd api && yarn dev:api
-web: yarn start:web
+web: cd api && yarn dev:api
 electron: node electron-wait-react
