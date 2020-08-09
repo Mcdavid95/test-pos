@@ -75,7 +75,7 @@ async function createServer(): Promise<any> {
       controllers: [__dirname + '/controllers/**/*{.ts,.js}']
     });
 
-    const port = process.env.PORT || 3500;
+    const port = 5000 //|| process.env.PORT || 3500;
 
     app.listen(port, () => {
       console.log(`server started at ${port}`);
