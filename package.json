@@ -49,6 +49,7 @@
   "scripts": {
     "dev:web": "BROWSER=none react-scripts start",
     "dev:api": "cd api && yarn run dev:api",
+    "build": "yarn && react-scripts build",
     "build:web": "react-scripts build",
     "build:api": "cd api && yarn run build:api",
     "prod:serve": "cd api && yarn run build:api && node build/index.js",
