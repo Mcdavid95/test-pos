@@ -53,7 +53,7 @@
     "build:web": "react-scripts build",
     "build:api": "cd api && yarn run build:api",
     "prod:serve": "cd api && yarn run build:api && node build/index.js",
-    "start:web": "cross-env REACT_APP_IS_PROD=true  cross-env REACT_APP_PROD_URL_PREFIX='http://localhost:$PORT/api' yarn run dev:web",
+    "start:web": "cross-env REACT_APP_IS_PROD=true  cross-env REACT_APP_PROD_URL_PREFIX='http://localhost:5000/api' yarn run dev:web",
     "start:api": "cd api && yarn start",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
